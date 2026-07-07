@@ -1,0 +1,17 @@
+name: Deploy App
+
+on:
+  workflow_dispatch: # 這個關鍵字就是開啟「手動執行」按鈕的開關！
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Simulate Build and Deploy
+        run: |
+          echo "正在編譯台股選股App..."
+          echo "正在連線至 Supabase 資料庫..."
+          echo "手動部署成功！網站已成功上線！"
